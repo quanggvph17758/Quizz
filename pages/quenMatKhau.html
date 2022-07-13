@@ -1,0 +1,49 @@
+<div class="card">
+    <div class="card-header">
+        Quên Mật Khẩu
+    </div>
+    <div class="card-body">
+        <form action="" method="" name="formDK">
+            <div class="mb-3">
+                <label>Email</label>
+                <input type="email" class="form-control mt-2" name="email" id="email" ng-model="sv.email"
+                    autocomplete="off" required>
+                <small class="text-danger" ng-hide="formDK.email.$untouched || formDK.email.$valid">
+                    Không được để trống
+                </small>
+            </div>
+            <div class="p-3 pt-3">
+                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">
+                    <i class="fas fa-save"></i>
+                    Xác Nhận
+                </button>
+                <button type="button" class="btn btn-outline-danger m-3">
+                    <i class="fas fa-window-close"></i>
+                    Thoát
+                </button>
+            </div>
+        </form>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel"> Thông Báo </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h4 class="text-success" ng-show="formDK.$valid">
+                            Mật khẩu của bạn là:
+                        </h4>
+                        <h4 class="text-danger" ng-hide="formDK.$valid">
+                            Thông tin bạn nhập chưa chính xác
+                        </h4>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -11,7 +11,7 @@
     <link href="font/fontawesome-free-5.15.4/css/all.min.css" rel="stylesheet">
 </head>
 
-<body>
+<body ng-app="myApp">
     <div class="container">
         <header class="row">
             <div id="carouselExampleInterval" class="carousel slide p-0" data-bs-ride="carousel">
@@ -64,37 +64,37 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="TrangChu.html">
+                            <a class="nav-link active" aria-current="page" href="#trangChu">
                                 <i class="fas fa-home"></i>
                                 Trang Chủ
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="GioiThieu.html">
+                            <a class="nav-link" href="#gioiThieu">
                                 <i class="fas fa-list-ul"></i>
                                 Giới Thiệu
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="MonHoc.html">
+                            <a class="nav-link" href="#monHoc">
                                 <i class="fas fa-book-open"></i>
                                 Môn Học
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="LienHe.html">
+                            <a class="nav-link" href="#lienHe">
                                 <i class="fas fa-phone-square-alt"></i>
                                 Liên Hệ
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="GopY.html">
+                            <a class="nav-link" href="#gopY">
                                 <i class="fas fa-envelope-square"></i>
                                 Góp Ý
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="HoiDap.html">
+                            <a class="nav-link" href="#hoiDap">
                                 <i class="fas fa-question-circle"></i>
                                 Hỏi Đáp
                             </a>
@@ -108,17 +108,17 @@
                                 Tài Khoản
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="DangKi.html">
+                                <li><a class="dropdown-item" href="#dangKi">
                                         <i class="fas fa-address-book"></i>
                                         Đăng kí
                                     </a>
                                 </li>
-                                <li><a class="dropdown-item" href="DangNhap.html">
+                                <li><a class="dropdown-item" href="#dangNhap">
                                         <i class="fas fa-sign-in-alt"></i>
                                         Đăng Nhập
                                     </a>
                                 </li>
-                                <li><a class="dropdown-item" href="QuenMatKhau.html">
+                                <li><a class="dropdown-item" href="#quenMatKhau">
                                         <i class="fas fa-user-lock"></i>
                                         Quên Mật Khẩu
                                     </a>
@@ -126,19 +126,24 @@
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" href="DangNhap.html">
+                                <li><a class="dropdown-item" href="#dangNhap">
                                         <i class="fas fa-sign-out-alt"></i>
                                         Đăng Xuất
                                     </a>
                                 </li>
-                                <li><a class="dropdown-item" href="DoiMatKhau.html">
+                                <li><a class="dropdown-item" href="#doiMatKhau">
                                         <i class="fas fa-retweet"></i>
                                         Đổi Mật Khẩu
                                     </a>
                                 </li>
-                                <li><a class="dropdown-item" href="CapNhatTK.html">
+                                <li><a class="dropdown-item" href="#capNhatTK">
                                         <i class="fas fa-pen"></i>
                                         Cập Nhật Tài Khoản
+                                    </a>
+                                </li>
+                                <li><a class="dropdown-item" href="#quanLiND">
+                                        <i class="fas fa-pen"></i>
+                                        Quản lí người dùng
                                     </a>
                                 </li>
                             </ul>
@@ -149,38 +154,7 @@
         </nav>
         <div class="row mt-3">
             <article class="col-sm-9 mt-3 pb-3 p-0">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <img src="images/anh1.jpg">
-                    </div>
-                    <div class="col-sm-6 ps-3">
-                        <h4> Sinh viên FPT Polytechnic Cần Thơ có việc làm trước khi nhận bằng tốt nghiệp </h4>
-                        <p> Sáng ngày 4/4/2021, tại Khách sạn Mường Thanh (Cần Thơ), 206 sinh viên FPT Polytechnic đã
-                            long trọng nhận bằng tốt nghiệp, đánh dấu kết thúc 2 năm 4 tháng học tập, rèn luyện, bước
-                            chân vào ngưỡng cửa mới của cuộc đời. </p>
-                        <p> Có mặt tại buổi lễ, ông Nguyễn Thành Quang - Giám đốc Công ty Tư vấn Giải pháp Tiên Phong
-                            “khoe” luôn sản phẩm của 12 bạn sinh viên FPT Polytechnic, đồng thời cũng là nhân viên công
-                            ty mình. “12 bạn sinh viên FPT Polytechnic chỉ mất một tuần để học hỏi, sau đó tham gia ngay
-                            vào dự án. </p>
-                    </div>
-                </div>
-                <div class="row pt-3">
-                    <div class="col-sm-6 ps-3">
-                        <h4> Cao đẳng FPT Polytechnic trao học bổng 27 triệu đồng cho thanh niên có hoàn cảnh khó khăn
-                        </h4>
-                        <p> Cao đẳng FPT Polytechnic dành tặng 170 suất học bổng, mỗi suất trị giá 27 triệu đồng cho
-                            thanh niên có hoàn cảnh khó khăn yêu thích công nghệ thông tin. Học bổng nằm trong dự án
-                            Hướng tới tương lai - Fit for Future, nhằm xoá bỏ khoảng cách giới trong lĩnh vực công nghệ
-                            thông tin, tăng cường năng lực lao động của nhóm thanh niên có hoàn cảnh khó khăn và đặc
-                            biệt là nữ giới. </p>
-                        <p> 170 suất học bổng này dành cho đối tượng từ 17 – 30 tuổi, có một trong những điều kiện như
-                            sau: thanh niên thuộc diện gia đình có thu nhập thấp, bố mẹ không có khả năng chu cấp, gia
-                            đình chính sách, dân tộc thiểu số, bộ đội xuất ngũ… </p>
-                    </div>
-                    <div class="col-sm-6">
-                        <img src="images/anh2.jpg">
-                    </div>
-                </div>
+                <div ng-view> </div>
             </article>
             <aside class="col-sm-3 mt-3 mb-3">
                 <div class="card" style="width: 20rem;">
@@ -188,19 +162,8 @@
                         <i class="fas fa-list-ul"></i>
                         Danh Mục Chung
                     </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item"> Lập Trình Hướng Đối Tượng Với Java </li>
-                        <li class="list-group-item"> Lập Trình PHP </li>
-                        <li class="list-group-item"> Lập Trình WEB </li>
-                        <li class="list-group-item"> Lập Trình ASP.NET </li>
-                        <li class="list-group-item"> Lập Trình Android Cơ Bản </li>
-                        <li class="list-group-item"> Lập Trình Android Nâng Cao </li>
-                        <li class="list-group-item"> Quản Lý Dự Án Với Agile </li>
-                        <li class="list-group-item"> Thiết Kế Giao Diện Trên Android </li>
-                        <li class="list-group-item"> Thiết Kế Layout </li>
-                        <li class="list-group-item"> Điện Toán Đám Mây </li>
-                        <li class="list-group-item"> Digital Marketing </li>
-                        <li class="list-group-item"> Quản Trị Khách Sạn </li>
+                    <ul class="list-group list-group-flush" ng-controller="monHoc_Ctrl">
+                        <li class="list-group-item" ng-repeat="sub in subjects"> {{ sub.Name }} </li>
                     </ul>
                 </div>
             </aside>
@@ -228,9 +191,16 @@
     </div>
 
     <!-- Script -->
+    <script src="js/Angularjs.min.js"></script>
+    <script src="js/angular-route.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="ctrl/myApp.js"></script>
+    <script src="ctrl/monHoc.js"></script>
+    <script src="ctrl/dangKi.js"></script>
+    <script src="ctrl/dangNhap.js"></script>
+    <script src="ctrl/quanLiND.js"></script>
 </body>
 
 </html>

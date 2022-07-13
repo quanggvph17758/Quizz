@@ -1,0 +1,88 @@
+<div class="card">
+    <div class="card-header">
+        Cập Nhật Tài Khoản
+    </div>
+    <div class="card-body">
+        <form action="" method="" name="formDK">
+            <div class="row pt-3 p-3">
+                <div class="form-group col-sm-6">
+                    <label> Họ Và Tên <span class="text-danger">*</span> </label>
+                    <input type="text" name="hoTen" id="hoTen" class="form-control mt-2" ng-model="sv.hoTen"
+                        autocomplete="off" required>
+                    <small class="text-danger" ng-hide="formDK.hoTen.$untouched || formDK.hoTen.$valid">
+                        Không được để trống
+                    </small>
+                </div>
+                <div class="form-group col-sm-6">
+                    <label> Email <span class="text-danger">*</span> </label>
+                    <input type="email" class="form-control mt-2" name="email" id="email" ng-model="sv.email"
+                        autocomplete="off" required>
+                    <div class="text-danger" ng-hide="formDK.email.$untouched || formDK.email.$valid">
+                        <small ng-show="formDK.email.$error.required"> Không được để trống </small>
+                        <small ng-show="formDK.email.$error.email"> Không đúng định dạng Email </small>
+                    </div>
+                </div>
+            </div>
+            <div class="row pt-3 p-3">
+                <div class="form-group col-sm-6">
+                    <label> Giới Tính </label>
+                    <div class="row p-3">
+                        <div class="col-3 form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"
+                                checked>
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Nam
+                            </label>
+                        </div>
+                        <div class="col-3 form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                Nữ
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-sm-6">
+                    <label> Ngày Sinh </label>
+                    <input class="form-control mt-2" type="date" name="ngaySinh" id="ngaySinh" ng-model="sv.ngaySinh"
+                        autocomplete="off" required>
+                    <small class="text-danger" ng-hide="formDK.ngaySinh.$untouched || formDK.ngaySinh.$valid">
+                        Không được để trống
+                    </small>
+                </div>
+            </div>
+            <div class="p-3 pt-3">
+                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">
+                    <i class="fas fa-save"></i>
+                    Cập Nhật
+                </button>
+                <button type="button" class="btn btn-outline-danger m-3">
+                    <i class="fas fa-window-close"></i>
+                    Hủy
+                </button>
+            </div>
+        </form>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel"> Thông Báo </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h4 class="text-success" ng-show="formDK.$valid">
+                            Cập nhật thành công
+                        </h4>
+                        <h4 class="text-danger" ng-hide="formDK.$valid">
+                            Thông tin bạn nhập chưa chính xác
+                        </h4>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

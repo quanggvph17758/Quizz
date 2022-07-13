@@ -1,0 +1,106 @@
+<div class="card" ng-controller="myctrl">
+    <div class="card-header">
+        Đăng Ký Tài Khoản
+    </div>
+    <div class="card-body">
+        <form action="" method="" name="formDK" ng-submit="onSubmitForm($event)">
+            <div class="row pt-3 p-3">
+                <div class="form-group col-sm-6">
+                    <label> Họ Và Tên <span class="text-danger">*</span> </label>
+                    <input type="text" name="fullname" id="fullname" class="form-control mt-2"
+                        ng-model="student.fullname" autocomplete="off" required>
+                    <small class="text-danger" ng-hide="formDK.fullname.$untouched || formDK.fullname.$valid">
+                        Không được để trống
+                    </small>
+                </div>
+                <div class="form-group col-sm-6">
+                    <label> Tài Khoản </label>
+                    <input type="text" name="username" id="username" class="form-control mt-2"
+                        ng-model="student.username" autocomplete="off" required>
+                    <small class="text-danger" ng-hide="formDK.username.$untouched || formDK.username.$valid">
+                        Không được để trống
+                    </small>
+                </div>
+            </div>
+            <div class="row pt-3 p-3">
+                <div class="form-group col-sm-6">
+                    <label> Mật Khẩu <span class="text-danger">*</span> </label>
+                    <input class="form-control mt-2" type="password" name="password" id="password"
+                        ng-model="student.password" autocomplete="off" required>
+                    <small class="text-danger" ng-hide="formDK.password.$untouched || formDK.password.$valid">
+                        Không được để trống
+                    </small>
+                </div>
+                <div class="form-group col-sm-6">
+                    <label> Email <span class="text-danger">*</span> </label>
+                    <input type="email" class="form-control mt-2" name="email" id="email" ng-model="student.email"
+                        autocomplete="off" required>
+                    <div class="text-danger" ng-hide="formDK.email.$untouched || formDK.email.$valid">
+                        <small ng-show="formDK.email.$error.required"> Không được để trống </small>
+                        <small ng-show="formDK.email.$error.email"> Không đúng định dạng Email </small>
+                    </div>
+                </div>
+            </div>
+            <div class="row pt-3 p-3">
+                <div class="form-group col-sm-6">
+                    <label> Giới Tính </label>
+                    <div class="row p-3">
+                        <div class="col-3 form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"
+                                value="true" ng-model="student.gender" checked>
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Nam
+                            </label>
+                        </div>
+                        <div class="col-3 form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+                                value="false" ng-model="student.gender">
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                Nữ
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-sm-6">
+                    <label> Ngày Sinh </label>
+                    <input class="form-control mt-2" type="text" name="birthday" id="birthday"
+                        ng-model="student.birthday" autocomplete="off" required>
+                    <small class="text-danger" ng-hide="formDK.birthday.$untouched || formDK.birthday.$valid">
+                        Không được để trống
+                    </small>
+                </div>
+            </div>
+            <div class="p-3 pt-3">
+                <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <i class="fas fa-save"></i>
+                    Đăng Ký
+                </button>
+                <button class="btn btn-outline-danger m-3">
+                    <i class="fas fa-window-close"></i>
+                    Thoát
+                </button>
+            </div>
+        </form>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel"> Thông Báo </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h4 class="text-success" ng-show="formDK.$valid">
+                            Đăng kí thành công
+                        </h4>
+                        <h4 class="text-danger" ng-hide="formDK.$valid">
+                            Thông tin bạn nhập chưa chính xác
+                        </h4>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

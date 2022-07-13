@@ -1,0 +1,17 @@
+<div class="card">
+    <div class="card-header">
+        Môn Học
+    </div>
+    <div class="card-body">
+        <div class="row" ng-controller="monHoc_Ctrl">
+            <div class="card col-6 ms-3 mt-3" style="width: 18rem;" ng-repeat="sub in subjects">
+                <img src="images/logos/{{ sub.Logo }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title"> {{ sub.Id }} </h5>
+                    <p class="card-text"> {{ sub.Name }} </p>
+                    <a href="#trangThi" class="btn btn-primary"> Làm Bài </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

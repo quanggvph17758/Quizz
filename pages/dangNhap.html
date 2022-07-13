@@ -1,0 +1,35 @@
+<div class="card card-default center mt-5" ng-controller="myContrl">
+    <div class="card-heading">
+        <div class="row pt-3 p-3 pd-3">
+            <h5 class="text-center fw-bold fs-4">Đăng Nhập</h5>
+            <hr>
+            <form name="frmLogin" id="frmLogin">
+                <div class="mb-3 ">
+                    <label> Tài Khoản </label>
+                    <input class="form-control" ng-model="username" required type="text" name="username" id="username">
+                    <small ng-hide="frmLogin.username.$valid || frmLogin.username.$untouched" class="text-danger">Không
+                        được để trống</small>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Mật Khẩu</label>
+                    <input name="password" ng-model="password" id="password" required type="password"
+                        class="form-control">
+                    <small ng-hide="frmLogin.password.$valid || frmLogin.password.$untouched" class="text-danger">Không
+                        được để trống</small>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                        <button ng-click="login()" class="btn peach-gradient btn-outline-success">Login</button>
+                    </div>
+                    <div class="col-6 mt-2">
+                        <a href="QuenMatKhau.html">Quên mật khẩu?</a>
+                    </div>
+                    <div class="col-2"> </div>
+                    <div class="col-2 mt-2">
+                        <a href="DangKi.html">Đăng ký</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
